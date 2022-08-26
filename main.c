@@ -36,6 +36,8 @@ int setup()
 		snakeBod[a].x = snakeBod[0].x+a;
 		snakeBod[a].y = snakeBod[0].y;
 	}
+	
+	generateFood();
 
 	return 0;
 }
@@ -178,7 +180,6 @@ int main(int arc, char ** argv)
 	nodelay(stdscr, TRUE);
 
 	setup();
-	generateFood();
 
 	while(gameOver == false) {
 		gameUpdate();
