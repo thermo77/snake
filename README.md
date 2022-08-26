@@ -3,5 +3,6 @@ A snake game made using the ncurses library
 
 ![gameplay](./gameplay.gif)
 
-# installation
+## installation
+
 > gcc -lncurses main.c
