@@ -6,7 +6,7 @@ A snake game made using the ncurses library
 # installation
 
 install ncurses library
-> sudo pacman -S ncurses
+```sudo pacman -S ncurses```
 
 Compile
-> gcc -lncurses main.c
+```gcc -lncurses main.c```
