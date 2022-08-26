@@ -5,11 +5,11 @@ a snake game made using the ncurses library
 
 # installation
 ```
-sudo pacman -S build-essential
+$ sudo pacman -S build-essential
 ```
 ```
-sudo pacman -S ncurses
+$ sudo pacman -S ncurses
 ```
 ```
-gcc -lncurses main.c
+$ gcc -lncurses main.c
 ```
