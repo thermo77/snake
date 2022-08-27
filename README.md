@@ -5,7 +5,7 @@ a snake game made using the ncurses library
 
 # installation
 
-- Arch
+**Arch**
 ```
 $ sudo pacman -S build-essential
 ```
@@ -16,7 +16,8 @@ $ sudo pacman -S ncurses
 $ gcc -lncurses main.c
 ```
 
-- Debian Based
+
+**Debian Based**
 ```
 $ sudo apt-get install build-essential
 ```
@@ -27,7 +28,8 @@ $ sudo apt-get install libncurses5-dev libncursesw5-dev
 $ gcc -lncurses main.c
 ```
 
-- Fedora
+
+**Fedora**
 ```
 $ sudo yum install gcc
 ```
