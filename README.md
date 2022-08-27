@@ -1,9 +1,19 @@
-# ncurses snake
-a snake game made using the ncurses library
-
 ![gameplay](./gameplay.gif)
 
-# installation
+# Description
+A simple snake game written in C that uses the ncurses library
+
+
+# Controls
+
+W up
+A left
+S down
+D right
+
+
+# Installation
+
 
 **Arch**
 ```
