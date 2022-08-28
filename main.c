@@ -6,7 +6,8 @@
 #define zoneWidth 32
 #define zoneHeight 16
 
-int gameOver, snakeLength, score;
+bool gameOver; 
+int snakeLength, score;
 
 struct coordinates {
 	int x;
