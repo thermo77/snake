@@ -16,14 +16,21 @@ struct coordinates {
 typedef struct coordinates coordinates;
 coordinates snakeBod[zoneWidth * zoneHeight], food;
 
-int generateFood() {
+void generateFood() {
 	food.x = (rand() % zoneWidth-2);
 	food.y = (rand() % zoneHeight-2);
 
-	return 0;
+	if(food.x <= 1 || food.y <= 0) {
+		generateFood();
+	}
+	for(int a = 0; a < snakeLength; a++) {
+		if(snakeBod[a].x == food.x && snakeBod[a].y == food.y) {
+			generateFood();
+		}
+	}
 }
 
-int setup()
+void setup()
 {
 	gameOver = false;
 	snakeLength = 3;
@@ -36,13 +43,9 @@ int setup()
 		snakeBod[a].x = snakeBod[0].x+a;
 		snakeBod[a].y = snakeBod[0].y;
 	}
-	
-	generateFood();
-
-	return 0;
 }
 
-int input()
+void input()
 {
 	switch(getch()) {
 		case 'w':
@@ -70,13 +73,13 @@ int input()
 			}
 			break;
 	}
-	return 0;
 }
 
-int snakeUpdate() {	
+void snakeUpdate() {	
 	int preX = snakeBod[0].x;
 	int preY = snakeBod[0].y;
 	int pre2X, pre2Y;
+
 	for(int a = 1; a < snakeLength; a++) {
 		pre2X = snakeBod[a].x;
 		pre2Y = snakeBod[a].y;
@@ -116,19 +119,15 @@ int snakeUpdate() {
 		snakeLength++;
 		generateFood();
 	}
-
-	return 0;
 }
 
-int gameUpdate()
+void gameUpdate()
 {
 	input();
 	snakeUpdate();
-
-	return 0;
 }
 
-int draw() 
+void draw() 
 {
 	clear();
 	
@@ -167,8 +166,6 @@ int draw()
 	printw("\n\n");	
 	printw("score: %i\n",score);
 	refresh();
-
-	return 0;
 }
 
 int main(int arc, char ** argv) 
@@ -180,6 +177,7 @@ int main(int arc, char ** argv)
 	nodelay(stdscr, TRUE);
 
 	setup();
+	generateFood();
 
 	while(gameOver == false) {
 		gameUpdate();
