@@ -21,7 +21,7 @@ $ gcc -lncurses main.c
 ```
 
 
-**Debian Based**
+**Debian**
 ```
 $ sudo apt-get install build-essential
 ```
