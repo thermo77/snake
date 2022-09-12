@@ -1,4 +1,4 @@
-# Ncurses Snake
+# Ncurses Snake Game
 
 ![gameplay](./gameplay.gif)
 
